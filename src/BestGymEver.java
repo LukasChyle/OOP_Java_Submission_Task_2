@@ -109,9 +109,9 @@ public class BestGymEver {
 
     // Checks if date is newer or older than one year
     public boolean checkValidityDate(String dateString) throws DateTimeParseException {
-            LocalDate expireDate = LocalDate.now().minusYears(1).minusDays(1);
-            LocalDate date = LocalDate.parse(dateString);
-            return date.isAfter(expireDate);
+        LocalDate date = LocalDate.parse(dateString);
+        LocalDate expireDate = LocalDate.now().minusYears(1).minusDays(1);
+        return date.isAfter(expireDate);
     }
 
     // Loggs in a personal file, time and date when member entered the gym
